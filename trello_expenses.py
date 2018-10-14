@@ -45,7 +45,7 @@ class FrozenDict(object):
 
 def read_settings():
     with open('keys.json', 'r') as data:
-        keys = json.loads(data)
+        keys = json.load(data)
         return FrozenDict({
             'token':   keys["token"],
             'api_key': k["api_key"],
@@ -119,7 +119,10 @@ if __name__ == '__main__':
     SETTINGS = read_settings()
 
     # Set up basic logging
-    logging.basicConfig(format='%(levelname)s %(message)s',
-                        level=logging.DEBUG, filename='DEBUG.log',
-                        filemode='w')
+    logging.basicConfig(
+        format='%(levelname)s %(message)s',
+        level=logging.DEBUG,
+        filename='DEBUG.log',
+        filemode='w'
+    )
     main()
