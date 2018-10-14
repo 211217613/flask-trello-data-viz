@@ -8,23 +8,19 @@ import json
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Lots of issues with Python3. Lots of unicode, string errors, Just switched to
-# py2. should try to use dicts for {name: cost} and to  practice using dicts
-
-#TODO:
 
 # idBoard': '577b17583e5d17ee55b20e44',
 # idList': '577b17583e5d17ee55b20e45',
 MONTHS = ['jan', 'feb', 'March', 'April', 'May', 'June', 'July', 'Aug',
           'sept', 'oct', 'Nov', 'Dec']
 USDMXN = {
-        'jan': 20.8340,
-        'dec': 20.7275,
-        'nov': 20.5720,
-        'oct': 18.8640,
-        'sept': 19.3850,
-        'aug': 18.7851,
-        'july': 18.752
+    'jan': 20.8340,
+    'dec': 20.7275,
+    'nov': 20.5720,
+    'oct': 18.8640,
+    'sept': 19.3850,
+    'aug': 18.7851,
+    'july': 18.752
 }
 
 
@@ -63,7 +59,7 @@ def get_total_per_month(month, board_list):
     total = sum(
         float(crd.name.split('-')[1])
         for lst in board_list if month in lst.name.lower() for crd in lst.cards
-               )
+    )
     if total > 1000:
         return total / USDMXN[month]
     else:
