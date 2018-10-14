@@ -1,0 +1,3 @@
+trollop
+seaborn
+matplotlib
