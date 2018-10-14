@@ -8,11 +8,11 @@ Add a file, in the root directory called `keys.json` with your token and api_key
 token = alphanumeric
 api_key = alphanumeric
 
-Python 2.x
+### Python 2.x
 
-`pip install trollop`
-`pip install seaborn`
-`pip install matplotlib`
+- `pip install trollop`
+- `pip install seaborn`
+- `pip install matplotlib`
 
 ## Sample Trello Board with cards
 ![alt tag](https://raw.githubusercontent.com/211217613/trello-scraper/master/images/trello_screenshot.png)
