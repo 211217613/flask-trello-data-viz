@@ -44,7 +44,7 @@ def read_settings():
         keys = json.load(data)
         return FrozenDict({
             'token':   keys["token"],
-            'api_key': k["api_key"],
+            'api_key': keys["api_key"],
             'board': 'BE89pW61'
         })
 
